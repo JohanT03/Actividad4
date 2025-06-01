@@ -1,8 +1,16 @@
-let producto = 1;
+function productoImpares(n) {
+    let producto = 1;
+    let contador = 0;
+    let numero = 1;
 
-for (let i = 1; i < 20; i += 2) {
-  producto *= i;
+    while (contador < n) {
+        producto *= numero;
+        numero += 2;
+        contador++;
+    }
+
+    return producto;
 }
 
-console.log("El producto de los 10 primeros números impares es: " + producto);
-
+const resultado = productoImpares(10);
+console.log("El producto de los 10 primeros números impares es:", resultado);
